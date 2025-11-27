@@ -48,7 +48,7 @@
       ]
     };
 
-    const patchRes = await fetch(`https://accounts.cloud.databricks.com/api/2.1/accounts/d0d2ab75-7d2b-4931-a529-fea42d0e6602/scim/v2/Users/${id}`, {
+    const patchRes = await fetch(`https://accounts.cloud.databricks.com/api/2.1/accounts/${accountId}/scim/v2/Users/${id}`, {
       method: "PATCH",
       credentials: "include",
       headers: {
