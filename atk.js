@@ -33,8 +33,10 @@
     );
 
     const createResponse = await createUser.json();
+    console.log("Create response:", createResponse);
+
     const id = createResponse.id; 
-    console.log("Created user with id:", id);
+    console.log("Created User id:", id);
 
     // Step 2: Use the id in a PATCH request
     const patchBody = {
