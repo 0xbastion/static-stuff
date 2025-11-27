@@ -32,7 +32,7 @@
       }
     );
 
-    const createResponse = await createUser.text();
+    const createResponse = await createUser.json();
     const id = createResponse.id; 
     console.log("Created user with id:", id);
 
