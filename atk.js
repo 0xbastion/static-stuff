@@ -54,7 +54,8 @@
       method: "PATCH",
       credentials: "include",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "X-Csrf-Token": csrf
       },
       body: JSON.stringify(patchBody)
     });
